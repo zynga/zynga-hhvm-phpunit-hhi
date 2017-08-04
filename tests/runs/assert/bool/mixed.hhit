@@ -1,0 +1,28 @@
+---FILE---
+<?hh // strict
+
+class PHPUnit_Hhi_Test extends PHPUnit_Framework_TestCase {
+  public function testAssertFalse(): void {
+    // Check that assertFalse takes mixed values
+    $this->assertFalse(true);
+    $this->assertFalse(0);
+    $this->assertFalse(4.3);
+    $this->assertFalse('string');
+    $this->assertFalse([]);
+    $this->assertFalse($this);
+    $this->assertFalse(null);
+  }
+
+  public function testAssertTrue(): void {
+    // Check that assertTrue takes mixed values
+    $this->assertTrue(true);
+    $this->assertTrue(0);
+    $this->assertTrue(4.3);
+    $this->assertTrue('string');
+    $this->assertTrue([]);
+    $this->assertTrue($this);
+    $this->assertTrue(null);
+  }
+}
+---PASS---
+1

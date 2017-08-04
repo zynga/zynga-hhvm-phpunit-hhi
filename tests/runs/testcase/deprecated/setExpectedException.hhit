@@ -1,0 +1,13 @@
+---FILE---
+<?hh // strict
+
+class PHPUnit_Hhi_Test extends PHPUnit_Framework_TestCase {
+  public function testSetExpectedException(): void {
+    $this->setExpectedException(self::class, 'n');
+  }
+}
+---PASS---
+0
+---ERRORS---
+5:4128:The method setExpectedException is deprecated: Use expectException() and expectExceptionMessage() instead. Definition is here.
+

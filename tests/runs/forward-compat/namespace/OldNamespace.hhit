@@ -1,0 +1,12 @@
+---FILE---
+<?hh // strict
+
+namespace phpunit\hhi\test;
+
+use phpunit\framework\TestCase as TestCase;
+
+class Test extends TestCase {}
+---PASS---
+0
+---ERRORS---
+7:2006:Could not find phpunit\framework\TestCase. Did you mean PHPUnit\Framework\TestCase?.

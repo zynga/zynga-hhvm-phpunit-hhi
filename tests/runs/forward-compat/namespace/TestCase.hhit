@@ -1,0 +1,10 @@
+---FILE---
+<?hh // strict
+
+namespace phpunit\hhi\test;
+
+use PHPUnit\Framework\TestCase as TestCase;
+
+class Test extends TestCase {}
+---PASS---
+1

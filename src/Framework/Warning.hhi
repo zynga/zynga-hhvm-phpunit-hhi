@@ -1,0 +1,6 @@
+<?hh // decl
+
+class PHPUnit_Framework_Warning extends PHPUnit_Framework_Exception
+  implements PHPUnit_Framework_SelfDescribing {
+  public function toString(): string;
+}

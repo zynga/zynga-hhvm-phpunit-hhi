@@ -1,0 +1,41 @@
+---FILE---
+<?hh // strict
+
+class PHPUnit_Hhi_Test extends PHPUnit_Framework_TestCase {
+  public function testAssertFalse(): void {
+    // Check that assertFalse takes only a string for its message
+    $this->assertFalse(false, 'Message');
+    $this->assertFalse(false, 0);
+    $this->assertFalse(false, false);
+    $this->assertFalse(false, 4.3);
+    $this->assertFalse(false, [1]);
+    $this->assertFalse(false, $this);
+    $this->assertFalse(false, null);
+  }
+
+  public function testAssertTrue(): void {
+    // Check that assertTrue takes only a string for its message
+    $this->assertTrue(false, 'Message');
+    $this->assertTrue(false, 0);
+    $this->assertTrue(false, false);
+    $this->assertTrue(false, 4.3);
+    $this->assertTrue(false, [1]);
+    $this->assertTrue(false, $this);
+    $this->assertTrue(false, null);
+  }
+}
+---PASS---
+0
+---ERRORS---
+7:4110:Invalid argument. This is a string. It is incompatible with an int.
+8:4110:Invalid argument. This is a string. It is incompatible with a bool.
+9:4110:Invalid argument. This is a string. It is incompatible with a float.
+10:4110:Invalid argument. This is a string. It is incompatible with an array (used like a vector).
+11:4110:Invalid argument. This is a string. It is incompatible with an object of type PHPUnit_Hhi_Test.
+12:4110:Invalid argument. This is a string. It is incompatible with a nullable type.
+18:4110:Invalid argument. This is a string. It is incompatible with an int.
+19:4110:Invalid argument. This is a string. It is incompatible with a bool.
+20:4110:Invalid argument. This is a string. It is incompatible with a float.
+21:4110:Invalid argument. This is a string. It is incompatible with an array (used like a vector).
+22:4110:Invalid argument. This is a string. It is incompatible with an object of type PHPUnit_Hhi_Test.
+23:4110:Invalid argument. This is a string. It is incompatible with a nullable type.

@@ -1,0 +1,39 @@
+{
+  "name": "91carriage/phpunit-hhi",
+  "description": "HHI definitions for PHPUnit",
+  "keywords": ["phpunit", "testing", "hhvm", "hack"],
+  "homepage": "https://git.simon.geek.nz/91-carriage/phpunit-hhi",
+  "license": ["MIT"],
+  "require": {
+    "hhvm": ">=3.12.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "6.0.x-dev",
+      "dev-phpunit-5.7": "5.7.x-dev",
+      "dev-phpunit-5.6": "5.6.x-dev",
+      "dev-phpunit-5.5": "5.5.x-dev",
+      "dev-phpunit-5.4": "5.4.x-dev",
+      "dev-phpunit-5.3": "5.3.x-dev",
+      "dev-phpunit-5.2": "5.2.x-dev",
+      "dev-phpunit-5.1": "5.1.x-dev",
+      "dev-phpunit-5.0": "5.0.x-dev",
+      "dev-phpunit-4.8": "4.8.x-dev"
+    }
+  },
+  "conflict": {
+    "phpunit/phpunit": "<5.7.15"
+  },
+  "suggest": {
+    "91carriage/dbunit-hhi": "HHI files for use with DbUnit"
+  },
+  "support": {
+    "issues": "https://git.simon.geek.nz/91-carriage/phpunit-hhi/issues",
+    "source": "https://git.simon.geek.nz/91-carriage/phpunit-hhi/tree/master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

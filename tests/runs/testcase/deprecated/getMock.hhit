@@ -1,0 +1,12 @@
+---FILE---
+<?hh // strict
+
+class PHPUnit_Hhi_Test extends PHPUnit_Framework_TestCase {
+  public function testGetMock(): void {
+    $mock = $this->getMock(self::class);
+  }
+}
+---PASS---
+0
+---ERRORS---
+5:4128:The method getMock is deprecated: Use createMock() or getMockBuilder() instead. Definition is here.

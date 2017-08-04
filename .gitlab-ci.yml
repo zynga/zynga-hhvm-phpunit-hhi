@@ -1,0 +1,59 @@
+stages:
+  - typecheck
+  - test
+  - deploy
+
+before_script:
+  - apt-get update
+  - apt-get install -y wget curl
+  - "echo 'assume_php=false' > .hhconfig"
+  - ./tests/composer.sh
+  - composer install
+
+cache:
+  paths:
+    - vendor/
+
+hack-min:
+  script:
+    - hh_server --check .
+  stage: typecheck
+  image: hhvm/hhvm:3.12-lts-latest
+  tags:
+    - docker
+
+hack:
+  script:
+    - hh_server --check .
+  stage: typecheck
+  image: hhvm/hhvm:latest
+  tags:
+    - docker
+
+phpunit-min:
+  script:
+    - hhvm vendor/bin/phpunit --bootstrap tests/HHITest.php tests/
+  stage: test
+  image: hhvm/hhvm:3.12-lts-latest
+  tags:
+    - docker
+
+phpunit:
+  script:
+    - hhvm vendor/bin/phpunit --bootstrap tests/HHITest.php tests/
+  stage: test
+  image: hhvm/hhvm:latest
+  tags:
+    - docker
+
+packagist:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - "curl -X POST \
+       -H 'content-type:application/json' \
+       \"https://packagist.org/api/update-package?username=simon_w&apiToken=$PACKAGIST_TOKEN\" \
+       -d '{\"repository\":{\"url\":\"https://git.simon.geek.nz/91-carriage/phpunit-hhi.git\"}}'"
+  tags:
+    - docker

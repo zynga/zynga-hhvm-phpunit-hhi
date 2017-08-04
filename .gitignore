@@ -1,0 +1,5 @@
+.hhconfig
+.project
+.DS_Store
+/vendor/
+/tags*
