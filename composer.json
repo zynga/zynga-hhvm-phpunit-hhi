@@ -22,7 +22,8 @@
     }
   },
   "conflict": {
-    "phpunit/phpunit": "<5.7.15"
+    "phpunit/phpunit": "<5.7.15",
+    "91carriage/phpunit-hhi"
   },
   "suggest": {
     "91carriage/dbunit-hhi": "HHI files for use with DbUnit"
