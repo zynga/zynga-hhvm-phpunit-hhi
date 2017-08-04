@@ -1,5 +1,5 @@
 {
-  "name": "91carriage/phpunit-hhi",
+  "name": "zynga/zynga-hhvm-phpunit-hhi",
   "description": "HHI definitions for PHPUnit",
   "keywords": ["phpunit", "testing", "hhvm", "hack"],
   "homepage": "https://git.simon.geek.nz/91-carriage/phpunit-hhi",
