@@ -1,3 +1,9 @@
+# Forked
+
+This is a fork of the 91carrage files for providing hhi coverage for phpunit. As
+Zynga has modified phpunit for strict compliance, some of the function interfaces
+changed also.
+
 # HHI files for PHPUnit
 
 [![build status][build-image]][build-link]
