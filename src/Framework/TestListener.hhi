@@ -2,8 +2,8 @@
 
 // Due to the way interfaces get checked at run time, this needs to match the
 // actual implementation, so no bonus types :(
-interface PHPUnit_Framework_TestListener {
-  public function addError(PHPUnit_Framework_Test $test, Exception $e, $time);
+interface NOT_NEEDED_PHPUnit_Framework_TestListener {
+  public function addError(PHPUnit_Framework_Test $test, Exception $e, $time): void;
   public function addFailure(
     PHPUnit_Framework_Test $test,
     PHPUnit_Framework_AssertionFailedError $e,
