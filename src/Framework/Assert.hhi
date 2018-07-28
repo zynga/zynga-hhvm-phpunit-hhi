@@ -20,9 +20,12 @@ abstract class PHPUnit_Framework_Assert {
   ): void;
   public function assertAttributeContains(
     mixed $needle,
-    string $name,
-    mixed $object,
+    string $haystackAttributeName,
+    mixed $haystackClassOrObject,
     string $message = '',
+    bool $ignoreCase = false,
+    bool $checkForObjectIdentity = true,
+    bool $checkForNonObjectIdentity = false
   ): void;
   public function assertAttributeContainsOnly(
     string $type,
@@ -90,9 +93,12 @@ abstract class PHPUnit_Framework_Assert {
   ): void;
   public function assertAttributeNotContains(
     mixed $needle,
-    string $name,
-    mixed $object,
+    string $haystackAttributeName,
+    mixed $haystackClassOrObject,
     string $message = '',
+    bool $ignoreCase = false,
+    bool $checkForObjectIdentity = true,
+    bool $checkForNonObjectIdentity = false
   ): void;
   public function assertAttributeNotContainsOnly(
     string $type,
@@ -170,6 +176,9 @@ abstract class PHPUnit_Framework_Assert {
     mixed $needle,
     mixed $array,
     string $msg = '',
+    bool $ignoreCase = false,
+    bool $checkForObjectIdentity = true,
+    bool $checkForNonObjectIdentity = false
   ): void;
   public function assertContainsOnly(
     string $type,
@@ -338,6 +347,9 @@ abstract class PHPUnit_Framework_Assert {
     mixed $needle,
     mixed $array,
     string $msg = '',
+    bool $ignoreCase = false,
+    bool $checkForObjectIdentity = true,
+    bool $checkForNonObjectIdentity = false
   ): void;
   public function assertNotContainsOnly(
     string $type,
