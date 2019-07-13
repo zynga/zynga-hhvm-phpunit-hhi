@@ -2,7 +2,10 @@
 
 namespace PHPUnitHHI;
 
-abstract class HHITest extends \PHPUnit_Framework_TestCase {
+use Zynga\PHPUnit\V2\TestCase;
+
+abstract class HHITest extends TestCase {
+
   protected function parseFile(string $testName): \ConstMap<string, string> {
     $file = __DIR__.'/runs/'.$testName.'.hhit';
     $parts = explode('---', file_get_contents($file));
